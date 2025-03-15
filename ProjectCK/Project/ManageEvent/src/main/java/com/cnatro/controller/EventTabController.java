@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author NHAT
  */
-public class NotificationController implements Initializable {
+public class EventTabController implements Initializable {
 
     /**
      * Initializes the controller class.

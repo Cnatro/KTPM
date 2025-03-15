@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--<AnchorPane id="AnchorPane" >-->
+<VBox spacing="10" 
+          xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="com.cnatro.controller.EventTabController">
+    <padding>
+        <Insets bottom="10" left="15" right="15" top="10" />
+    </padding>
+                    
+    <HBox alignment="CENTER_LEFT" prefHeight="1.0" prefWidth="570.0" spacing="10">
+        <Label styleClass="section-label" text="TẠO VÀ QUẢN LÝ SỰ KIỆN" />
+    </HBox>
+                    
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="120" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+                        
+        <Label text="Tên sự kiện:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="eventNameField" promptText="Nhập tên sự kiện" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        
+        <Label text="Ngày tổ chức:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="eventDatePicker" promptText="Chọn ngày" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        
+        <Label text="Thời gian:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="eventTimeField" promptText="HH:MM" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        
+        <Label text="Địa điểm:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="eventLocationField" promptText="Nhập địa điểm" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        
+        <Label text="Sức chứa:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="eventCapacityField" promptText="Nhập số lượng khách tối đa" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+                    
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button fx:id="createEventButton" styleClass="primary-button" text="Tạo Sự Kiện" />
+        <Button fx:id="updateEventButton" text="Cập Nhật" />
+        <Button fx:id="deleteEventButton" text="Xóa" />
+    </HBox>
+                    
+    <Label styleClass="list-label" text="Danh sách sự kiện:" />
+    <TableView fx:id="eventTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="eventNameColumn" prefWidth="200" text="Tên sự kiện" />
+            <TableColumn fx:id="eventDateColumn" prefWidth="120" text="Ngày tổ chức" />
+            <TableColumn fx:id="eventTimeColumn" prefWidth="80" text="Thời gian" />
+            <TableColumn fx:id="eventLocationColumn" prefWidth="150" text="Địa điểm" />
+            <TableColumn fx:id="eventCapacityColumn" prefWidth="80" text="Sức chứa" />
+            <TableColumn fx:id="eventStatusColumn" prefWidth="100" text="Trạng thái" />
+        </columns>
+    </TableView>
+                    
+    <Label fx:id="eventValidationLabel" styleClass="validation-label" />
+</VBox>
+<!--</AnchorPane>-->

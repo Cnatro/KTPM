@@ -1,6 +1,7 @@
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\Registration.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\User.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\module-info.java
+C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\controller\NotificationTabController.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\controller\ManageEventController.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\Event.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\JdbcUtils.java
@@ -11,5 +12,5 @@ C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnat
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\Notification.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\controller\RegisterUserController.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\manageevent\App.java
-C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\controller\NotificationController.java
+C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\controller\EventTabController.java
 C:\Users\NHAT\Code\JavaKTPM\ProjectCK\Project\ManageEvent\src\main\java\com\cnatro\pojo\Payment.java
