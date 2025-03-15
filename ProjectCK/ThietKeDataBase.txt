@@ -1,0 +1,23 @@
+- User( ho, ten, email, sdt, vai tro)
+- Event (ten, ngayBatDau, ngayKetThuc,
+soLuongNguoiToiDa, diaDiem_id,  is_active)
+- DiaDiem ( ten, sucChua )
+- ThongBao ( content, event_id )
+- Ve ( event_id, soLuongVe, LoaiVe_id)
+- LoaiVe ( ten, giaVe )
+- DangKi (user_id, event_id, ve_id)
+- Payment(  user_id, event_id , soLuongVe, tongSoTien,is_payment)
+
+
+- Quản lí sự kiện:
+	actor : Admin
+	+ Đăng nhập
+	+ Tạo sự kiện
+	+ Cap Nhật, xóa, tìm kiếm
+- Đăng kí sự kiện:
+	actor:User	
+	+ đăng nhập
+	+ Đăng kí sự kiện
+	+ Xóa dk, cap nhạt, tim kiếm
+- Gửi thông báo
+	
