@@ -1,6 +1,7 @@
 package com.cnatro.fxenglishapp;
 
 import com.cnatro.pojo.Question;
+import com.cnatro.pojo.Utils;
 import com.cnatro.services.QuestionServices;
 import java.io.IOException;
 import java.net.URL;
@@ -45,22 +46,53 @@ public class PrimaryController implements Initializable {
         App.setRoot("secondary");
     }
 
-    public void checkHandler(ActionEvent e) throws SQLException {
+    public void checkHandler(ActionEvent e) {
+        Question q = this.questions.get(this.currentIndex);
+        boolean v1 = ridoA.isSelected() == true && q.getChoices().get(0).isCorrect() == true;
+        boolean v2 = ridoB.isSelected() == true && q.getChoices().get(1).isCorrect() == true;
+        boolean v3 = ridoC.isSelected() == true && q.getChoices().get(2).isCorrect() == true;
+        boolean v4 = ridoD.isSelected() == true && q.getChoices().get(3).isCorrect() == true;
 
+        if (v1 || v2 || v3 || v4) {
+            Utils.getAlert("CORRECT!!!").show();
+        } else {
+            Utils.getAlert("INCORRECT!!!").show();
+        }
     }
 
     public void nextHandler(ActionEvent e) {
-        if (this.currentIndex < this.questions.size()) {
+        if (this.currentIndex < this.questions.size() - 1) {
             this.currentIndex++;
-        }else
+        } else {
             this.currentIndex = 0;
+        }
+
+        try {
+            loadQuestionToUI();
+        } catch (SQLException ex) {
+            Logger.getLogger(PrimaryController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void prevHandler(ActionEvent e) {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+        } else {
+            this.currentIndex = this.questions.size() - 1;
+        }
+
+        try {
+            loadQuestionToUI();
+        } catch (SQLException ex) {
+            Logger.getLogger(PrimaryController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
             QuestionServices q = new QuestionServices();
-            this.questions = q.getQuestion(3);
+            this.questions = q.getQuestion(3,"");
 
             loadQuestionToUI();
 

@@ -1,3 +1,21 @@
-GridPane{
-    -fx-background-color: aquamarine;
+GridPane {
+    -fx-background-color: lightblue;
+    -fx-padding: 10;
+}
+
+Text.Subject {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-fill: red;
+    -fx-stroke: gold;
+    -fx-stroke-width: 3;
+}
+
+Button {
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+}
+
+HBox {
+    -fx-spacing: 5;
 }
